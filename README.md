@@ -17,18 +17,24 @@ $ open https://git-scm.com
 ## Tutorial
 
 ```ShellSession
+# Присваиваем переменной GITHUB_USERNAME наше имя пользователя на Github
 $ export GITHUB_USERNAME=<имя_пользователя>
+# Присваиваем переменной GITHUB_EMAIL нашу почту с Github
 $ export GITHUB_EMAIL=<адрес_почтового_ящика>
+# Присваиваем переменной GITHUB_TOKEN сгенерированный токен
 $ export GITHUB_TOKEN=<сгенирированный_токен>
 $ alias edit=<nano|vi|vim|subl>
 ```
 
 ```ShellSession
 $ cd ${GITHUB_USERNAME}/workspace
+# Активация скрипта
 $ source scripts/activate
+
 ```
 
 ```ShellSession
+# Создаем 
 $ mkdir ~/.config
 $ cat > ~/.config/hub <<EOF
 github.com:
