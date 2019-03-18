@@ -42,17 +42,37 @@ $ git config --global hub.protocol https
 ```ShellSession
 $ mkdir projects/lab02 && cd projects/lab02
 $ git init
+Initialized empty Git repository in /home/momhustler/bootyass/workspace/projects/lab02/.git/
+
 $ git config --global user.name ${GITHUB_USERNAME}
 $ git config --global user.email ${GITHUB_EMAIL}
 # check your git global settings
 $ git config -e --global
 $ git remote add origin https://github.com/${GITHUB_USERNAME}/lab02.git
 $ git pull origin master
+From https://github.com/bootyass/lab02
+ * branch            master     -> FETCH_HEAD
+fatal: refusing to merge unrelated histories
+
 $ touch README.md
 $ git status
+On branch master
+nothing to commit, working tree clean
+
 $ git add README.md
 $ git commit -m"added README.md"
 $ git push origin master
+warning: no common commits
+remote: Enumerating objects: 10, done.
+remote: Counting objects: 100% (10/10), done.
+remote: Compressing objects: 100% (8/8), done.
+remote: Total 72 (delta 2), reused 10 (delta 2), pack-reused 62
+Unpacking objects: 100% (72/72), done.
+From https://github.com/bootyass/lab02
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> origin/master
+fatal: refusing to merge unrelated histories
+
 ```
 
 Добавить на сервисе **GitHub** в репозитории **lab02** файл **.gitignore**
@@ -67,7 +87,23 @@ $ git push origin master
 
 ```ShellSession
 $ git pull origin master
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 1 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+From https://github.com/bootyass/lab02
+ * branch            master     -> FETCH_HEAD
+   7370432..90c29ee  master     -> origin/master
+fatal: refusing to merge unrelated histories
+
 $ git log
+commit 1283b640bf99266120c95b6c1f8811341f3984d1 (HEAD -> master)
+Author: bootyass <panda_canniball@Mail.ru>
+Date:   Mon Mar 18 17:53:45 2019 +0300
+
+    added README.md
+
 ```
 
 ```ShellSession
@@ -131,8 +167,26 @@ $ edit README.md
 
 ```ShellSession
 $ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        examples/
+        include/
+        sources/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+
 $ git add .
 $ git commit -m"added sources"
+[master 3d20522] added sources
+ 4 files changed, 32 insertions(+)
+ create mode 100644 examples/example1.cpp
+ create mode 100644 examples/example2.cpp
+ create mode 100644 include/print.hpp
+ create mode 100644 sources/print.cpp
+
 $ git push origin master
 ```
 
