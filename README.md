@@ -32,8 +32,8 @@ $ source scripts/activate
 
 ```
 
-# Создаем директорию в корневой папке, конфигурируем hub
 ```ShellSession
+# Создаем директорию в корневой папке, конфигурируем hub
 $ mkdir ~/.config
 $ cat > ~/.config/hub <<EOF
 github.com:
