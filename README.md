@@ -256,6 +256,11 @@ $ export LAB_NUMBER=02
 
 # Клонируем репозиторий в новую директорию
 $ git clone https://github.com/tp-labs/lab${LAB_NUMBER}.git tasks/lab${LAB_NUMBER}
+Клонирование в «tasks/lab02»…
+remote: Enumerating objects: 72, done.
+remote: Total 72 (delta 0), reused 0 (delta 0), pack-reused 72
+Распаковка объектов: 100% (72/72), готово.
+
 $ mkdir reports/lab${LAB_NUMBER}
 
 # Копируем файлы
